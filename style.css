@@ -140,3 +140,11 @@ select,
     font-weight: bold;
     margin: 10px 0px;
 }
+
+.add-collection,
+.add-Cost,
+.show-customer,
+.add-inst,
+.add-customer {
+    display: none;
+}

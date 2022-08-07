@@ -73,28 +73,27 @@
 
                 <a href="#">Cost List</a>
                 <a href="#">Collection List</a>
-                <button>Add Collection</button>
-                <button>Add Cost</button>
+                <button onclick="showCollect()">Add Collection</button>
+                <button id="show-cost" onclick="showCost()">Add Cost</button>
 
                 <p>Baki details</p>
                 <a href="#">Customer List</a>
                 <a href="#">Due List</a>
                 <a href="#">Instalment List</a>
 
-                <button>Create New Customer</button>
-                <button>Add Due </button>
-                <button>Add Instalment </button>
+                <button id="show-customer" onclick="showCustomer()">Create New Customer</button>
+                <button id="show-due" onclick="showDue()">Add Due </button>
+                <button id="show-inst" onclick="showInst()">Add Instalment </button>
             </div>
             <div class="content">
                 <div class="add-Cost">
                     <h3>Add Cost</h3>
                     <form action="">
-                        <p>Date :</p>
-                        <input type="date" id="birthday" name="birthday">
+
                         <p>Type Of Cost :</p>
                         <select name="cars" id="cars" form="carform">
                             <option value="volvo">Personal</option>
-                            <option value="saab">Bussnise</option>
+                            <option value="saab">Bussniess </option>
 
                         </select>
                         <p>Remarks:</p>
@@ -107,14 +106,13 @@
                 <div class="add-collection">
                     <h3>Add Collection</h3>
                     <form action="">
-                        <p>Date :</p>
-                        <input type="date" id="birthday" name="birthday">
+
                         <p>Amount :</p>
                         <input type="text" name="" id="">
                         <input type="submit" value="Submit">
                     </form>
                 </div>
-                <div class="add-due">
+                <div class="add-inst">
                     <h3>Add Instalment</h3>
                     <form action="">
                         <p>Customer Name :</p>
@@ -153,12 +151,12 @@
                     <h3>Add New customer</h3>
                     <form action="">
                         <p>Customer Name :</p>
-                        <input type="text" name="" id="">
+                        <input type="text" id="addCustomerName">
                         <p>Customer Phone :</p>
-                        <input type="text" name="" id="">
+                        <input type="text" id="addCustomerPhone">
                         <p>Customer Address :</p>
-                        <input type="text" name="" id="">
-                        <input type="submit" value="Submit">
+                        <input type="text" id="addCustomerAdd">
+                        <input type="submit" value="Submit" id="addNewCustomer">
                     </form>
                 </div>
             </div>
