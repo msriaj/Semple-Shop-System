@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Income Profit</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+
+    <div class="app">
+        <div class="d-flex">
+            <div class="card">
+                <h1>000</h1>
+                <p>Collection</p>
+            </div>
+
+            <div class="card">
+                <h1>000</h1>
+                <p>Cost</p>
+            </div>
+
+            <div class="card">
+                <h1>000</h1>
+                <p>Due</p>
+            </div>
+
+            <div class="card">
+                <h1>000</h1>
+                <p>Todays Due</p>
+            </div>
+        </div>
+        <div class="d-flex">
+
+            <div class="sidebar">
+
+
+
+                <p>Shop details</p>
+
+                <a href="#">Cost List</a>
+                <a href="#">Collection List</a>
+                <button>Add Collection</button>
+                <button>Add Cost</button>
+
+                <p>Baki details</p>
+                <a href="#">Customer List</a>
+                <a href="#">Due List</a>
+                <a href="#">Instalment List</a>
+
+                <button>Create New Customer</button>
+                <button>Add Due </button>
+                <button>Add Instalment </button>
+            </div>
+            <div class="content">
+                <div class="add-Cost">
+                    <h3>Add Cost</h3>
+                    <form action="">
+                        <p>Date :</p>
+                        <input type="date" id="birthday" name="birthday">
+                        <p>Type Of Cost :</p>
+                        <select name="cars" id="cars" form="carform">
+                            <option value="volvo">Personal</option>
+                            <option value="saab">Bussnise</option>
+
+                        </select>
+                        <p>Remarks:</p>
+                        <input type="text" name="" id="">
+                        <p>Amount :</p>
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="add-collection">
+                    <h3>Add Collection</h3>
+                    <form action="">
+                        <p>Date :</p>
+                        <input type="date" id="birthday" name="birthday">
+                        <p>Amount :</p>
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="add-due">
+                    <h3>Add Instalment</h3>
+                    <form action="">
+                        <p>Customer Name :</p>
+                        <select name="cars" id="cars" form="carform">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+
+                        <p>Remarks:</p>
+                        <input type="text" name="" id="">
+                        <p>Amount :</p>
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="add-due">
+                    <h3>Add Due</h3>
+                    <form action="">
+                        <p>Customer Name :</p>
+                        <select name="cars" id="cars" form="carform">
+                            <option value="volvo">Volvo</option>
+                            <option value="saab">Saab</option>
+                            <option value="opel">Opel</option>
+                            <option value="audi">Audi</option>
+                        </select>
+                        <p>Product Details :</p>
+                        <input type="text" name="" id="">
+                        <p>Amount :</p>
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+                <div class="add-customer">
+                    <h3>Add New customer</h3>
+                    <form action="">
+                        <p>Customer Name :</p>
+                        <input type="text" name="" id="">
+                        <p>Customer Phone :</p>
+                        <input type="text" name="" id="">
+                        <p>Customer Address :</p>
+                        <input type="text" name="" id="">
+                        <input type="submit" value="Submit">
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./app.js"></script>
+</body>
+
+</html>
