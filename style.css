@@ -19,13 +19,38 @@ body {
 
 }
 
+a {
+    text-decoration: none;
+    color: #3ac47a;
+}
+
 .bg-red {
     background-color: #FF1E00 !important
 }
 
+header {
+    background-color: #fff;
+    padding: .8rem 0;
+    box-shadow: #ddd 2px 2px 5px;
+    margin-left: auto;
+    margin-right: auto;
+
+    width: 100%;
+    position: fixed;
+    top: 0
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    max-width: 800px;
+    margin: 0 auto;
+
+}
+
 .app {
-    width: 50%;
-    margin: 50px auto;
+    max-width: 800px;
+    margin: 100px auto;
     background-color: white;
     padding: 1.5rem;
     box-shadow: #ddd 5px 5px 5px;
@@ -35,13 +60,14 @@ body {
     display: flex;
     margin-bottom: 2rem;
     gap: 10px;
+
 }
 
 .card {
     background-color: var(--box);
     color: var(--light);
     padding: 1rem;
-    width: 50%;
+    width: 25%;
     text-align: center;
 }
 
