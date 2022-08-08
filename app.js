@@ -3,10 +3,25 @@ let showCostId = document.querySelector(".add-Cost");
 let showCustomerId = document.querySelector(".add-customer");
 let showDueId = document.querySelector(".add-due");
 let showInstId = document.querySelector(".add-inst");
+let showCollectID = document.querySelector(".show-collect-list");
 
 
 
+document.getElementById("cList").addEventListener("click", () => {
+    showCollect2List();
+    console.log("list ");
+});
 
+
+function showCollect2List() {
+    showCollectId.style.display = "none";
+    showCostId.style.display = "none";
+    showCustomerId.style.display = "none";
+    showDueId.style.display = 'none';
+    showInstId.style.display = "none";
+    showCollectID.style.display = "block";
+
+}
 
 function showCollect() {
     showCollectId.style.display = "block";
@@ -14,9 +29,7 @@ function showCollect() {
     showCustomerId.style.display = "none";
     showDueId.style.display = 'none';
     showInstId.style.display = "none";
-    console.log("working");
-    console.log(showCustomerId[0])
-
+    showCollectID.style.display = "none";
 
 }
 
@@ -26,6 +39,7 @@ function showCost() {
     showCustomerId.style.display = "none";
     showDueId.style.display = "none";
     showInstId.style.display = "none";
+    showCollectID.style.display = "none";
 }
 function showCustomer() {
     showCollectId.style.display = "none";
@@ -33,6 +47,7 @@ function showCustomer() {
     showCustomerId.style.display = "block";
     showDueId.style.display = "none";
     showInstId.style.display = "none";
+    showCollectID.style.display = "none";
 }
 function showDue() {
     showCollectId.style.display = "none";
@@ -40,6 +55,7 @@ function showDue() {
     showCustomerId.style.display = "none";
     showDueId.style.display = "block";
     showInstId.style.display = "none";
+    showCollectID.style.display = "none";
 }
 function showInst() {
     showCollectId.style.display = "none";
@@ -47,6 +63,7 @@ function showInst() {
     showCustomerId.style.display = "none";
     showDueId.style.display = "none";
     showInstId.style.display = "block";
+    showCollectID.style.display = "none";
 }
 
 
@@ -228,7 +245,6 @@ function showProfit() {
     let showCost = JSON.parse(localStorage.getItem('CostList'));
 
 
-
     let totalCostAmount = 0;
 
     for (let index = 0; index < showCost.length; index++) {
@@ -263,4 +279,15 @@ function todaysCollection() {
     console.log("todays Colect", totalCollectAmount)
     document.getElementById("todaysCollection").innerText = totalCollectAmount;
 }
-todaysCollection() 
+todaysCollection()
+
+function showCollectList() {
+    let showCollect = JSON.parse(localStorage.getItem('CollectList'));
+    let showCollectLi = "";
+
+    for (let index = 0; index < showCollect.length; index++) {
+        showCollectLi += `<div class="table-list" ><div> ${showCollect[index].CollectAmount} TK </div> <div class="text-green">  Collect Date:  ${showCollect[index].CollectDate}</div></div>`
+    }
+    document.getElementById("show-collect-list").innerHTML = showCollectLi;
+}
+showCollectList()

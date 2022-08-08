@@ -141,10 +141,31 @@ select,
     margin: 10px 0px;
 }
 
+.show-collect-list,
 .add-collection,
 .add-Cost,
 .show-customer,
 .add-inst,
 .add-customer {
     display: none;
+}
+
+.table-list {
+
+    background-color: #fff;
+    border-bottom: 1px solid var(--box);
+    display: flex;
+    justify-content: space-between;
+    padding: .7rem;
+    font-weight: 700;
+}
+
+.text-green {
+    color: var(--box);
+
+}
+
+#show-collect-list {
+    margin-top: 2rem;
+    box-shadow: #ddd 2px 2px 5px;
 }
