@@ -25,16 +25,16 @@
     <div class="app">
         <div class="d-flex">
             <div class="card">
-                <h1>11000</h1>
+                <h1 id="totalCollect">11000</h1>
                 <p>Monthly Collection</p>
             </div>
 
             <div class="card">
-                <h1>000</h1>
+                <h1 id="totalCost">000</h1>
                 <p>Monthly Cost</p>
             </div>
             <div class="card">
-                <h1>000</h1>
+                <h1 id="profit">000</h1>
                 <p>Monthly Profit</p>
             </div>
             <div class="card">
@@ -88,29 +88,29 @@
             <div class="content">
                 <div class="add-Cost">
                     <h3>Add Cost</h3>
-                    <form action="">
 
-                        <p>Type Of Cost :</p>
-                        <select name="cars" id="cars" form="carform">
-                            <option value="volvo">Personal</option>
-                            <option value="saab">Bussniess </option>
 
-                        </select>
-                        <p>Remarks:</p>
-                        <input type="text" name="" id="">
-                        <p>Amount :</p>
-                        <input type="text" name="" id="">
-                        <input type="submit" value="Submit">
-                    </form>
+                    <p>Type Of Cost :</p>
+
+                    <select id="TypeOfCost" name="cars" id="cars" form="carform">
+                        <option value="Personal">Personal</option>
+                        <option value="Business">Business </option>
+                    </select>
+                    <p>Remarks:</p>
+                    <input type="text" name="" id="CostRemarks">
+                    <p>Amount :</p>
+                    <input type="text" name="" id="CostAmount">
+                    <input type="submit" value="Submit" id="addCostBtn">
+
                 </div>
                 <div class="add-collection">
                     <h3>Add Collection</h3>
-                    <form action="">
 
-                        <p>Amount :</p>
-                        <input type="text" name="" id="">
-                        <input type="submit" value="Submit">
-                    </form>
+
+                    <p>Amount :</p>
+                    <input type="text" name="" id="addCollectAmount">
+                    <input type="submit" value="Submit" id="addCollectBtn">
+
                 </div>
                 <div class="add-inst">
                     <h3>Add Instalment</h3>
@@ -149,15 +149,15 @@
                 </div>
                 <div class="add-customer">
                     <h3>Add New customer</h3>
-                    <form action="">
-                        <p>Customer Name :</p>
-                        <input type="text" id="addCustomerName">
-                        <p>Customer Phone :</p>
-                        <input type="text" id="addCustomerPhone">
-                        <p>Customer Address :</p>
-                        <input type="text" id="addCustomerAdd">
-                        <input type="submit" value="Submit" id="addNewCustomer">
-                    </form>
+
+                    <p>Customer Name :</p>
+                    <input type="text" id="addCustomerName">
+                    <p>Customer Phone :</p>
+                    <input type="text" id="addCustomerPhone">
+                    <p>Customer Address :</p>
+                    <input type="text" id="addCustomerAdd">
+                    <input type="submit" value="Submit" id="addNewCustomer">
+
                 </div>
             </div>
         </div>
