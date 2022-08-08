@@ -209,6 +209,8 @@ function showCollectTotal() {
 
     }
     document.getElementById("totalCollect").innerText = totalCollectAmount;
+
+    todaysCollection()
 }
 
 showCollectTotal()
@@ -238,4 +240,27 @@ function showProfit() {
     document.getElementById("profit").innerText = totalCollectAmount - totalCostAmount;
 
 }
-showProfit() 
+showProfit()
+
+function todaysCollection() {
+    const today = new Date();
+    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
+
+
+    let showCollect = JSON.parse(localStorage.getItem('CollectList'));
+    console.log(showCollect);
+    let totalCollectAmount = 0;
+
+    for (let index = 0; index < showCollect.length; index++) {
+        console.log(showCollect[index].CollectDate);
+        if (showCollect[index].CollectDate == date) {
+            const element = parseInt(showCollect[index].CollectAmount);
+            totalCollectAmount += element;
+        }
+
+
+    }
+    console.log("todays Colect", totalCollectAmount)
+    document.getElementById("todaysCollection").innerText = totalCollectAmount;
+}
+todaysCollection() 
