@@ -83,15 +83,15 @@ function addCustomer(name, phone, address) {
         CustomerAddress: address
     }
 
-    let database = localStorage.getItem('customerList');
-    let inDatabase = database.includes(phone);
+    // let database = localStorage.getItem('customerList');
+    // let inDatabase = database.includes(phone);
 
-    if (inDatabase !== true) {
-        customerList.push(customer);
-    }
-    else {
-        console.log("agei ache");
-    }
+    // if (inDatabase !== true) {
+    customerList.push(customer);
+    // }
+    // else {
+    //     console.log("agei ache");
+    // }
 
     //get and concat costumer name
     customerList = customerList.concat(JSON.parse(localStorage.getItem('customerList') || '[]'));
@@ -179,7 +179,7 @@ function addCost(cost, remarks, type) {
         CostAmount: cost,
         TypeOfCost: type,
         CostRemarks: remarks,
-        CollectDate: date
+        CostDate: date
     }
 
     // let database = localStorage.getItem('Collect');
@@ -281,6 +281,8 @@ function todaysCollection() {
 }
 todaysCollection()
 
+
+// showCollectList list on click 
 function showCollectList() {
     let showCollect = JSON.parse(localStorage.getItem('CollectList'));
     let showCollectLi = "";
@@ -290,4 +292,46 @@ function showCollectList() {
     }
     document.getElementById("show-collect-list").innerHTML = showCollectLi;
 }
-showCollectList()
+showCollectList();
+
+
+// show Cost list on click 
+function showCostList() {
+    let showCost = JSON.parse(localStorage.getItem('CostList'));
+    let showCostLi = "";
+
+    for (let index = 0; index < showCost.length; index++) {
+        showCostLi += `<div class="table-list" ><div> ${showCost[index].CostAmount} TK </div> <div> ${showCost[index].TypeOfCost}  </div>  <div class="text-green">  Remarks:  ${showCost[index].CostRemarks}</div><div class="text-green">  Cost Date:  ${showCost[index].CostDate}</div></div>`
+    }
+    document.getElementById("show-Cost-list").innerHTML = showCostLi;
+}
+showCostList();
+
+// show list on click 
+function showCustomerList() {
+    let showCustomer = JSON.parse(localStorage.getItem('customerList'));
+    let showCustomerLi = "";
+
+    for (let index = 0; index < showCustomer.length; index++) {
+        showCustomerLi += `<div class="table-list" ><div> Name :  ${showCustomer[index].CustomerName}   </div> <div> ${showCustomer[index].CustomerPhone}  </div>  <div class="text-green">  Address:  ${showCustomer[index].CustomerAddress}</div> </div>`
+    }
+    document.getElementById("show-customer-list").innerHTML = showCustomerLi;
+}
+showCustomerList();
+
+// add due select 
+function showCustomerListonSelect() {
+    let showCustomer = JSON.parse(localStorage.getItem('customerList'));
+    let showCustomerLi = "";
+
+    for (let index = 0; index < showCustomer.length; index++) {
+
+
+
+
+        showCustomerLi += `<option value="${showCustomer[index].CustomerPhone}"> ${showCustomer[index].CustomerName} ${showCustomer[index].CustomerPhone} </option>`
+    }
+    document.getElementById("customerName").innerHTML = showCustomerLi;
+    document.getElementById("customerName2").innerHTML = showCustomerLi;
+}
+showCustomerListonSelect();
