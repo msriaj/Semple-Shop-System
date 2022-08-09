@@ -141,13 +141,17 @@ select,
     margin: 10px 0px;
 }
 
+.add-due,
+.jomataka-list,
+.show-Cost-list,
 .show-customer-list,
 .show-collect-list,
 .add-collection,
 .add-Cost,
 .show-customer,
 .add-inst,
-.add-customer {
+
+.bakitaka-list {
     display: none;
 }
 
