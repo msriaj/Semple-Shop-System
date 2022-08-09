@@ -16,6 +16,68 @@ document.getElementById("cList").addEventListener("click", () => {
     console.log("list ");
 });
 
+document.getElementById("cusTomarList").addEventListener("click", () => {
+    document.querySelector(".show-customer-list").style.display = "block";
+    showCollectId.style.display = "none";
+    showCostId.style.display = "none";
+    showCustomerId.style.display = "none";
+    showDueId.style.display = "none";
+    showInstId.style.display = "none";
+    showCollectID.style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
+})
+
+
+document.getElementById("listOfDue").addEventListener("click", () => {
+    document.querySelector(".bakitaka-list").style.display = "block";
+    document.querySelector(".show-customer-list").style.display = "none";
+    showCollectId.style.display = "none";
+    showCostId.style.display = "none";
+    showCustomerId.style.display = "none";
+    showDueId.style.display = "none";
+    showInstId.style.display = "none";
+    showCollectID.style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
+
+})
+
+document.getElementById("lisOfJoma").addEventListener("click", () => {
+    document.querySelector(".jomataka-list").style.display = "block";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    showCollectId.style.display = "none";
+    showCostId.style.display = "none";
+    showCustomerId.style.display = "none";
+    showDueId.style.display = "none";
+    showInstId.style.display = "none";
+    showCollectID.style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
+
+})
+document.getElementById("listOfCost").addEventListener("click", () => {
+    document.querySelector(".show-Cost-list").style.display = "block";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    showCollectId.style.display = "none";
+    showCostId.style.display = "none";
+    showCustomerId.style.display = "none";
+    showDueId.style.display = "none";
+    showInstId.style.display = "none";
+    showCollectID.style.display = "none";
+
+})
+
+
+
+
+
+
+// "show-Cost-list"
+
 
 function showCollect2List() {
     showCollectId.style.display = "none";
@@ -24,6 +86,10 @@ function showCollect2List() {
     showDueId.style.display = 'none';
     showInstId.style.display = "none";
     showCollectID.style.display = "block";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 
 }
 
@@ -34,6 +100,10 @@ function showCollect() {
     showDueId.style.display = 'none';
     showInstId.style.display = "none";
     showCollectID.style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 
 }
 
@@ -44,6 +114,10 @@ function showCost() {
     showDueId.style.display = "none";
     showInstId.style.display = "none";
     showCollectID.style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 }
 function showCustomer() {
     showCollectId.style.display = "none";
@@ -52,6 +126,10 @@ function showCustomer() {
     showDueId.style.display = "none";
     showInstId.style.display = "none";
     showCollectID.style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 }
 function showDue() {
     showCollectId.style.display = "none";
@@ -60,6 +138,10 @@ function showDue() {
     showDueId.style.display = "block";
     showInstId.style.display = "none";
     showCollectID.style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 }
 function showInst() {
     showCollectId.style.display = "none";
@@ -68,6 +150,10 @@ function showInst() {
     showDueId.style.display = "none";
     showInstId.style.display = "block";
     showCollectID.style.display = "none";
+    document.querySelector(".show-customer-list").style.display = "none";
+    document.querySelector(".bakitaka-list").style.display = "none";
+    document.querySelector(".jomataka-list").style.display = "none";
+    document.querySelector(".show-Cost-list").style.display = "none";
 }
 
 
@@ -437,9 +523,5 @@ function showbakitaka() {
 
 showbakitaka();
 
-"bakitaka-list"
-"jomataka-list"
-"show-customer-list"
-"show-Cost-list"
 
 
