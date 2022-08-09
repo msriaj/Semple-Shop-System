@@ -5,6 +5,10 @@ let showDueId = document.querySelector(".add-due");
 let showInstId = document.querySelector(".add-inst");
 let showCollectID = document.querySelector(".show-collect-list");
 
+//date
+
+const today = new Date();
+const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
 
 document.getElementById("cList").addEventListener("click", () => {
@@ -126,8 +130,6 @@ document.getElementById("addCollectBtn").addEventListener("click", () => {
 function addCollect() {
     let addCollectAmount = document.querySelector("#addCollectAmount").value;
 
-    const today = new Date();
-    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     let CollectList = [];
 
@@ -170,8 +172,6 @@ document.getElementById("addCostBtn").addEventListener("click", () => {
 function addCost(cost, remarks, type) {
 
 
-    const today = new Date();
-    const date = today.getFullYear() + '-' + (today.getMonth() + 1) + '-' + today.getDate();
 
     let CostList = [];
 
@@ -335,3 +335,66 @@ function showCustomerListonSelect() {
     document.getElementById("customerName2").innerHTML = showCustomerLi;
 }
 showCustomerListonSelect();
+
+
+
+//baki Tk Add to database
+
+document.getElementById("bakiBtn").addEventListener("click", () => {
+    let customerName = document.getElementById("customerName").value;
+    let bakiAmount = document.getElementById("bakiAmount").value;
+    let bakiRemarks = document.getElementById("bakiRemarks").value;
+
+
+
+    let bakiList = [];
+
+    let baki = {
+        customerPhone: customerName,
+        bakiAmount: parseInt(bakiAmount),
+        bakiRemarks: bakiRemarks,
+        bakiDate: date
+    }
+
+    bakiList.push(baki);
+
+    //get and concat baki details
+    bakiList = bakiList.concat(JSON.parse(localStorage.getItem('bakiList') || '[]'));
+
+    //set to  baki  list
+    localStorage.setItem("bakiList", JSON.stringify(bakiList));
+    console.log("c");
+
+})
+
+
+
+//joma Tk Add to database
+
+document.getElementById("jomaBtn").addEventListener("click", () => {
+    let customerName2 = document.getElementById("customerName2").value;
+    let jomaAmount = document.getElementById("jomaAmount").value;
+    let jomaRemarks = document.getElementById("jomaRemarks").value;
+
+
+
+    let jomaList = [];
+
+    let joma = {
+        customerPhone: customerName2,
+        jomaAmount: parseInt(jomaAmount),
+        jomaRemarks: jomaRemarks,
+        JomaDate: date
+    }
+
+    jomaList.push(joma);
+
+    //get and concat joma details
+    jomaList = jomaList.concat(JSON.parse(localStorage.getItem('jomaList') || '[]'));
+
+    //set to  joma  list
+    localStorage.setItem("jomaList", JSON.stringify(jomaList));
+    console.log("c");
+
+})
+
