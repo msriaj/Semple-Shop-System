@@ -398,3 +398,48 @@ document.getElementById("jomaBtn").addEventListener("click", () => {
 
 })
 
+// show joma taka list 
+
+
+function showJomataka() {
+    let jomaList = JSON.parse(localStorage.getItem('jomaList'));
+    let jomaListLi = "";
+    console.log(jomaList);
+
+
+    for (let index = 0; index < jomaList.length; index++) {
+        jomaListLi += ` <p style="background:#fff;border-bottom:1px solid green; padding :20px"> Amount : ${jomaList[index].jomaAmount} <br> Phone :  ${jomaList[index].customerPhone}<br> Remarks :${jomaList[index].jomaRemarks} <br>Date : ${jomaList[index].JomaDate}</p>  `
+    }
+
+    console.log(jomaListLi);
+    document.getElementById("jomataka-list").innerHTML = jomaListLi;
+}
+
+showJomataka();
+
+
+// show baki taka list 
+
+
+function showbakitaka() {
+    let bakiList = JSON.parse(localStorage.getItem('bakiList'));
+    let bakiListLi = "";
+    console.log(bakiList);
+
+
+    for (let index = 0; index < bakiList.length; index++) {
+        bakiListLi += ` <p style="background:#fff;border-bottom:1px solid green; padding :20px"> Amount : ${bakiList[index].bakiAmount} <br> Phone :  ${bakiList[index].customerPhone}<br> Remarks :${bakiList[index].bakiRemarks} <br>Date : ${bakiList[index].bakiDate}</p>  `
+    }
+
+    console.log(bakiListLi);
+    document.getElementById("bakitaka-list").innerHTML = bakiListLi;
+}
+
+showbakitaka();
+
+"bakitaka-list"
+"jomataka-list"
+"show-customer-list"
+"show-Cost-list"
+
+
